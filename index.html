@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Searching Algorithm Visualizer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Searching Algorithms</h1>
+
+<div class="container">
+
+<label>Enter Array (comma separated)</label>
+<input type="text" id="array" placeholder="10,20,30,40">
+
+<label>Enter Element to Search</label>
+<input type="number" id="key">
+
+<label>Select Algorithm</label>
+
+<select id="algorithm">
+<option value="linear">Linear Search</option>
+<option value="binary">Binary Search</option>
+<option value="jump">Jump Search</option>
+<option value="interpolation">Interpolation Search</option>
+<option value="exponential">Exponential Search</option>
+</select>
+
+<button onclick="searchElement()">Search</button>
+
+<h2 id="result"></h2>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
