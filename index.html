@@ -1,37 +1,96 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Searching Algorithm Visualizer</title>
-<link rel="stylesheet" href="style.css">
+    <title>Searching Algorithm Visualizer</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<h1>Searching Algorithms</h1>
+<h1>Searching Algorithms Visualizer</h1>
 
 <div class="container">
 
 <label>Enter Array (comma separated)</label>
-<input type="text" id="array" placeholder="10,20,30,40">
+<br>
+<input type="text" id="array" placeholder="Example: 10,20,30,40,50">
+
+<br><br>
 
 <label>Enter Element to Search</label>
+<br>
 <input type="number" id="key">
 
+<br><br>
+
 <label>Select Algorithm</label>
+<br>
 
 <select id="algorithm">
+
 <option value="linear">Linear Search</option>
 <option value="binary">Binary Search</option>
 <option value="jump">Jump Search</option>
 <option value="interpolation">Interpolation Search</option>
 <option value="exponential">Exponential Search</option>
+
 </select>
+
+<br><br>
 
 <button onclick="searchElement()">Search</button>
 
 <h2 id="result"></h2>
 
+<p id="time"></p>
+<p id="space"></p>
+
 </div>
+
+<br><br>
+
+<h2>Time Complexity Comparison</h2>
+
+<table border="1" align="center" cellpadding="10">
+
+<tr>
+<th>Algorithm</th>
+<th>Time Complexity</th>
+<th>Space Complexity</th>
+</tr>
+
+<tr>
+<td>Linear Search</td>
+<td>O(n)</td>
+<td>O(1)</td>
+</tr>
+
+<tr>
+<td>Binary Search</td>
+<td>O(log n)</td>
+<td>O(1)</td>
+</tr>
+
+<tr>
+<td>Jump Search</td>
+<td>O(√n)</td>
+<td>O(1)</td>
+</tr>
+
+<tr>
+<td>Interpolation Search</td>
+<td>O(log log n)</td>
+<td>O(1)</td>
+</tr>
+
+<tr>
+<td>Exponential Search</td>
+<td>O(log n)</td>
+<td>O(1)</td>
+</tr>
+
+</table>
 
 <script src="script.js"></script>
 
