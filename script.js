@@ -58,22 +58,60 @@ let algo=document.getElementById("algorithm").value;
 
 let arr=arrInput.split(",").map(Number);
 
-arr.sort((a,b)=>a-b);
+let index=-1;
+let time="";
+let space="";
 
-let index;
+if(algo=="linear"){
 
-if(algo=="linear")
 index=linearSearch(arr,key);
+time="Time Complexity: O(n)";
+space="Space Complexity: O(1)";
 
-else if(algo=="binary")
+}
+
+else if(algo=="binary"){
+
+arr.sort((a,b)=>a-b);
 index=binarySearch(arr,key);
+time="Time Complexity: O(log n)";
+space="Space Complexity: O(1)";
 
-else
+}
+
+else if(algo=="jump"){
+
+arr.sort((a,b)=>a-b);
 index=jumpSearch(arr,key);
+time="Time Complexity: O(√n)";
+space="Space Complexity: O(1)";
+
+}
+
+else if(algo=="interpolation"){
+
+arr.sort((a,b)=>a-b);
+index=interpolationSearch(arr,key);
+time="Time Complexity: O(log log n)";
+space="Space Complexity: O(1)";
+
+}
+
+else if(algo=="exponential"){
+
+arr.sort((a,b)=>a-b);
+index=exponentialSearch(arr,key);
+time="Time Complexity: O(log n)";
+space="Space Complexity: O(1)";
+
+}
 
 if(index==-1)
 document.getElementById("result").innerHTML="Element not found";
-
 else
 document.getElementById("result").innerHTML="Element found at index "+index;
+
+document.getElementById("time").innerHTML=time;
+document.getElementById("space").innerHTML=space;
+
 }
